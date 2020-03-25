@@ -1,6 +1,6 @@
 # Stack-Overflow-Voter
 
-##Instructions to run app locally
+## Instructions to run app locally
 
 1. Download Android Studio
 2. Download this repo as a zip file and unpack
