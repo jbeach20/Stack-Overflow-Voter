@@ -14,6 +14,7 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -125,6 +126,7 @@ public class QuestionActivity extends AppCompatActivity {
 
             questionId = getIntent().getStringExtra("question_id"); //NON-NLS
             canVote = getIntent().getBooleanExtra("can_vote", true); //NON-NLS
+            invalidateOptionsMenu();
 
             if(!canVote){
                 userDidVoteCorrectly = getIntent().getBooleanExtra("did_vote_correctly", false);
@@ -314,12 +316,39 @@ public class QuestionActivity extends AppCompatActivity {
         previousVote = position;
     }
 
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_question, menu);
+        return canVote;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         if (id == android.R.id.home) {
             finish();
+            return true;
+        }
+
+        if (id == R.id.action_help) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle("Which answer is 'accepted'?");
+            builder.setMessage("After reading the question, select the best answer to the question (or whichever one you think is the 'accepted' answer).\n\nThen just hit the blue 'Vote' button to submit your vote");
+            builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    showAnswers = true;
+                    userAnswerPos = previousVote;
+                    adapter.notifyDataSetChanged();
+                    recyclerView.scrollToPosition(acceptedAnswerPos);
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
             return true;
         }
 
