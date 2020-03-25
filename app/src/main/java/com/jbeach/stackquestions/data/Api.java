@@ -91,7 +91,7 @@ public class Api {
 
                 @Override
                 public void onFailure(okhttp3.Call call, IOException e) {
-                    Log.e("clientonFailure", e.toString());
+                    Log.e("clientOnFailure", e.toString());
                 }
 
                 @Override
@@ -112,10 +112,10 @@ public class Api {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-                            listener.onFailure(new ApiError("Error", "Error"));
+                            listener.onFailure(new ApiError("Error", "Error 1"));
                             return;
                         }
-                        listener.onFailure(new ApiError("Error", "Error"));
+                        listener.onFailure(new ApiError("Error", "Error 2"));
                     }
 
                 }
@@ -139,11 +139,12 @@ public class Api {
         String userMessage;
         String devMessage;
 
-        public ApiError(String userMessage, String devMessage){
+        ApiError(String userMessage, String devMessage){
             this.userMessage = userMessage;
             this.devMessage = devMessage;
         }
-        public ApiError(String devMessage){
+
+        ApiError(String devMessage){
             this.userMessage = "Sorry, there was an error";
             this.devMessage = devMessage;
         }

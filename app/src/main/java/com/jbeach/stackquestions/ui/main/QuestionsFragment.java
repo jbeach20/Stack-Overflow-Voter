@@ -136,8 +136,8 @@ public class QuestionsFragment extends Fragment {
 
                         JSONObject item = items.getJSONObject(i);
                         int id = item.getInt("question_id");
-                        String title = item.getString("title");
                         int count = item.getInt("answer_count");
+                        String title = item.getString("title");
                         String name = item.getJSONObject("owner").getString("display_name");
                         Date at = new Date(item.getLong("creation_date"));
 

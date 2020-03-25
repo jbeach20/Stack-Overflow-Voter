@@ -299,7 +299,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     }
 
-    private void setVote(String aId, int position){
+    private void setVote(int position){
         this.currentVote = answers.get(position);
         this.currentVote.setUserDidVote(true);
 
@@ -376,7 +376,7 @@ public class QuestionActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         //Go to question & answer activity
-                        setVote(a.getId(), position);
+                        setVote(position);
                     }
                 };
                 ((ViewHolder) holder).itemView.setOnClickListener(onClickListener);

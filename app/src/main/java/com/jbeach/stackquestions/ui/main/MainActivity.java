@@ -9,11 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.jbeach.stackquestions.R;
 
-//TODO tutorials
+//TODO tutorial
 //TODO handle wrong answer, then it gets voted correct answer
 //TODO handle duplicate answers to questions (check db/tell user they already answered)
-//TODO show tags on questions
-//TODO paging for questions list (maybe answers if more than ~10?)
+//TODO show tags for questions
+//TODO paging for questions list (maybe answers if > ~10?)
 //TODO character encoding
 //TODO databinding, viewmodel, livedata
 //TODO write instructions

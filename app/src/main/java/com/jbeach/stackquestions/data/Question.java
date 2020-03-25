@@ -38,15 +38,6 @@ public class Question {
         this.answerCount = answerCount;
     }
 
-//    public Question(int id){
-//        this.id = id;
-//        this.title = title;
-//        this.askedAt = askedAt;
-//        this.askedBy = askedBy;
-//        this.answerCount = answerCount;
-//    }
-
-
     public String getTitle() {
         return title;
     }
