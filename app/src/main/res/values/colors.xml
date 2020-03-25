@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="stack_gray">#eff0f1</color>
+    <color name="stack_gray_dark">#bbc0c4</color>
+    <color name="stack_red">#DA0E0E</color>
+    <color name="stack_orange">#f47e0f</color>
+    <color name="stack_orange_dark">#C7670D</color>
+    <color name="stack_green">#48a868</color>
+    <color name="stack_text">#000000</color>
+    <color name="stack_blue">#0095ff</color>
+    <color name="stack_yellow">#fbf2d4</color>
+    <color name="stack_purple">#2b2d6e</color>
+    <color name="stack_background">#ffffff</color>
+    <color name="stack_background_2">#e1ecf4</color>
+    <color name="stack_tab_background">#fafafb</color>
+
+
+</resources>

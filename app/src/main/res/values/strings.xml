@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Stack Voter</string>
+    <string name="tab_text_1">Stack Overflow Questions</string>
+    <string name="tab_text_2">Voting History</string>
+</resources>
