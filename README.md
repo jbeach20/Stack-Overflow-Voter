@@ -1,6 +1,6 @@
 # Stack-Overflow-Voter
 
-##Overall Goal
+## Overall Goal
 Create an Android app that displays a list of recent Stack Overflow questions that have an accepted answer and contain more than 1 answer.
 Allow visitors to view all the answers for a selected question and try to guess which answer was the accepted answer. Save each guess to display previously guessed questions/answers.
 
